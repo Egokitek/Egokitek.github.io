@@ -1,0 +1,40 @@
+{{ define "main" }}
+<div class="min-h-80 contact-form">
+    <div class="container">
+     <hgroup>
+      {{ partial "breadcrumbs.html" . }}
+      <h1>{{ .Title }}</h1>
+      <h2>{{ .Description }}</h2> 
+     </hgroup> 
+	
+    <form name="contact" method="POST" action="{{ .Site.Params.contactFormAction | relURL }}" >
+        <input name="_redirect" type="hidden" id="name" value="{{"/thanks/" | absURL}}">
+        <input name="_formsubmit_id" type="text" hidden>
+        <div class="grid">
+      
+          <label for="firstname">
+            Nombre
+            <input type="text" id="firstname" name="firstname" placeholder="Nombre" required>
+          </label>
+      
+          <label for="lastname">
+            Apellido
+            <input type="text" id="lastname" name="lastname" placeholder="Apellido">
+          </label>
+      
+        </div>
+      
+        <label for="email">Correo electrónico</label>
+        <input type="email" id="email" name="email" placeholder="Correo electrónico" required>
+        <small>Su correo electrónico no será compartido con nadie. </small>
+
+        <label for="email">Su mensaje</label>
+        <textarea name="message" id="message" cols="30" rows="5" style="resize: none;" required></textarea>
+        <small>Por favor indique en que puedo ayudarle:</small>
+      
+        <input type="submit">
+      
+      </form>
+    </div>
+</div>
+{{ end }}
