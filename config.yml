@@ -1,0 +1,197 @@
+---
+baseURL: https://victorbarahona.com/
+languageCode: en-us
+title: Víctor Barahona
+theme: piko
+paginate: "9"
+copyright: Una plantilla de [Heksagon](https://www.heksagon.net "Your most friendly developer")
+googleAnalytics: # Enter Google Analytics ie. UA-012345678-9
+enableRobotsTXT: true
+buildDrafts: false
+buildFuture: false
+buildExpired: false
+enableEmoji: true
+outputs:
+  home:
+  - HTML
+  - RSS
+  - JSON
+minify:
+  disableCSS: false
+  disableHTML: false
+  disableJS: false
+  disableJSON: false
+  disableSVG: false
+  disableXML: false
+  minifyOutput: true
+  tdewolff:
+    html:
+      keepWhitespace: false
+
+params:
+  analytics:
+    google:
+      SiteVerificationTag: # Google Site Verification
+    yandex:
+      SiteVerificationTag: # Yandex Site Verification
+    bing:
+      SiteVerificationTag: # Bing Site Verification
+  env: production
+  author: Víctor Barahona
+  description: Portfolio
+  math: false
+  images:
+  - "/uploads/og.webp"
+  label:
+    title: _Víctor Barahona_
+    text: ¡Bienvenido a mi portfolio!
+    icon: /uploads/droplet.svg
+    iconHeight: "35"
+    iconWIdth: "35"
+  comments: true
+  mainSections:
+  - Acerca de ...
+  - Proyectos
+  - Blog
+  ShowShareButtons: true
+  ShowCodeCopyButtons: true
+  ShowRelated: true
+  CookieNotice: Usamos cookies para mejorar la experiencia de navegación y mostrar información relevante.
+  #CookieLink: /legal/privacy/#cookies-and-web-beacons
+  CookieLink: /legal/terms-and-conditions/#cookies-and-web-beacons
+  CookieButton: Política de Cookies
+  disableAnchoredHeadings: false
+  contactFormAction: # Get link from https://formsubmit.io or https://fabform.io
+  assets:
+    disableFingerprinting: false
+    favicon: /uploads/droplet.svg
+    favicon16x16: /uploads/droplet.svg
+    favicon32x32: /uploads/droplet.svg
+    apple_touch_icon: /uploads/droplet.svg
+    safari_pinned_tab: /uploads/droplet.svg
+  ShowReadingTime: true
+  ShowBreadCrumbs: true
+  homepage:
+    # Hero Section
+    disableHeroSection: false
+    heroUpperTitle: 
+    heroTitle: Víctor Barahona
+    heroDescription: Maker y Desarrollador de proyectos IA
+    heroCTAPrimaryText: Blog
+    heroCTAPrimaryUrl: "/blog/"
+    heroCTASecondaryText: Contacto
+    heroCTASecondaryUrl: "/contact/"
+    heroBackgroundImage: "/uploads/Mifondo.jpg"
+    # About Section    
+    disableAboutSection: false
+    aboutTitle: Acerca de ...
+    aboutDescription: 
+    aboutImgUrl: "/uploads/Fotoperfil.PNG"
+    aboutContent: Soy un ingeniero que ha sabido adaptarse a diferentes olas tecnológicas a lo largo de 30 años de carrera profesional. He trabajado en temas como la enseñanza, mantenimiento en fábricas de automoción, instalación y operación de redes de telefonía móvil, impresión 3D, desarrollo de proyectos opensource como el AR Sandbox, Agricultura indoor, Arduino y Raspberry-Pi, etc. Actualmente trabajo en la empresa Camp Tecnológico, donde desarrollo proyectos de temática STEM. Usamos las Plataformas robóticas Dobot y NVIDIA Jetson. Empleamos Machine Learning / Deep Learning / Edge Computing en nuestros proyectos.
+    # Portfolio Section
+    disablePortfolioSection: false
+    portfolioTitle: Portfolio
+    portfolioDescription: Algunos de mis trabajos
+    portfolio:
+    - imageUrl: /uploads/mentalhealth.png
+      alt: Proyecto NLP en Saturdays AI
+      description: NLP para detección depresión en RRSS
+      websiteUrl: https://github.com/Egokitek/Deteccion_Depresion_RRSS_SaturdaysAI
+    - imageUrl: /uploads/arsandbox.jpg
+      alt: Augmented Reality Sandbox
+      description: AR Sandbox para exploración del paisaje
+      websiteUrl: https://www.egokitek.com/ar-sandbox/
+    - imageUrl: /uploads/topotron.png
+      alt: Topotron, display volumétrico
+      description: Topotron, display volumétrico
+      websiteUrl: https://github.com/Egokitek/TopoTron
+    - imageUrl: /uploads/artzainbotv2.jpg
+      alt: ArtzainBot, robot opensource
+      description: ArtzainBot, robot opensource
+      websiteUrl: https://github.com/Egokitek/Artzain-Bot      
+    - imageUrl: /uploads/openag.jpg
+      alt: Agricultura indoor
+      description: Agricultura indoor
+      websiteUrl: https://github.com/Egokitek/Food-Computer-a-la-guipuzcoana
+    - imageUrl: /uploads/ftf.png
+      alt: Fabrica Tu Fábrica
+      description: Fabrica Tu Fábrica
+      websiteUrl: https://github.com/Egokitek/FabricaTuFabrica
+    # Blog Section
+    disableBlogSection: false
+    blogTitle: Ultimos Posts
+    blogDescription: 
+    #blog:
+    #- imageUrl: /uploads/ftf.png
+    #  alt: Fabrica Tu Fábrica
+    #  description: Fabrica Tu Fábrica
+    #  websiteUrl: https://github.com/Egokitek/FabricaTuFabrica
+    seeMoreText: Ir al Blog     
+  # Search Options (https://fusejs.io/)
+  fuseOpts:
+    isCaseSensitive: false
+    shouldSort: true
+    location: "0"
+    distance: "1000"
+    threshold: "0.4"
+    minMatchCharLength: "0"
+    keys:
+    - title
+    - permalink
+    - summary
+    - content
+  plugins:
+    css:
+    - link: plugins/css/pico.min.css
+    js:
+    - link: plugins/js/feather.min.js
+menus:
+  main: # Main Menu
+  - name: Blog
+    title: 
+    pre: pen-tool
+    url: "/blog"
+    weight: "10"
+  #- name: Proyectos
+  #  title: 
+  #  pre: folder
+  #  url: "/portfolio"
+  #  weight: "20"
+  - name: Búsqueda
+    title: 
+    pre: search
+    url: "/search"
+    weight: "30"
+  - name: Contacto
+    title: 
+    pre: mail
+    url: "/contact"
+    weight: "40"
+  - name: Github
+    title: 
+    pre: github
+    url: https://github.com/Egokitek
+    weight: "50"
+  - name: Linkedin
+    title: 
+    pre: linkedin
+    url: https://www.linkedin.com/in/Victor-barahona-65559549/
+    weight: "60"
+  - name: Twitter
+    title: 
+    pre: twitter
+    url: https://twitter.com/VictorJBarahona
+    weight: "70"      
+  search: # Search page's quick links
+  - name: Categorías
+    title: Categorías
+    url: "/categories"
+    weight: "10"
+  - name: Archivos
+    title: Archivos
+    url: "/archives"
+    weight: "20"
+  - name: Tags
+    title: Tags
+    url: "/tags"
+    weight: "30"
