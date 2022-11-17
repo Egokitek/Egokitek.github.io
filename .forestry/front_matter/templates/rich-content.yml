@@ -1,0 +1,31 @@
+---
+label: Rich content
+hide_body: false
+fields:
+- type: text
+  name: author
+  label: author
+- type: text
+  name: title
+  label: title
+- type: datetime
+  name: date
+  label: date
+- type: text
+  name: description
+  label: description
+- type: datetime
+  name: publishDate
+  label: publishDate
+- type: list
+  name: tags
+  label: tags
+- type: list
+  name: categories
+  label: categories
+- type: boolean
+  name: ShowToc
+  label: ShowToc
+- type: boolean
+  name: TocOpen
+  label: TocOpen
